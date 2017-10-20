@@ -15,10 +15,11 @@ def test(request):
     #                     filename="walry.log")
     logging.basicConfig(level=logging.DEBUG)
     logging.debug("request:{}".format(request.COOKIES))
-    response = HttpResponse(content_type='application/json')
-    name = response.set_cookie("sex","1")
+    # response = HttpResponse(content_type='application/json')
+    # name = response.set_cookie("sex","1")
     # response.content = json.dumps({"say":"hello"})
-    response["Access-Control-Allow-Origin"] = "*"
+    # response["Access-Control-Allow-Origin"] = "*"
+    request.session["sex"] = 1
     return HttpResponse("nihao")
     # return response
 

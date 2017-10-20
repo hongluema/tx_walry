@@ -12,7 +12,7 @@ from food import views
 #                     UserAddressListView, UserAddressCreateView, UserAddressDeleteView, UserAddressUpdateView, \
 #                     TestView
 
-app_name = 'food'
+app_name = 'weixin'
 
 urlpatterns = [
     # url(r'^test/', views.test, name="test"),

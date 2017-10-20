@@ -17,9 +17,10 @@ def test(request):
     logging.debug("request:{}".format(request.COOKIES))
     response = HttpResponse(content_type='application/json')
     name = response.set_cookie("age","23")
-    response.content = json.dumps({"say":"hello"})
+    # response.content = json.dumps({"say":"hello"})
     response["Access-Control-Allow-Origin"] = "*"
-    return HttpResponse("nihao")
+    # return HttpResponse("nihao")
+    return response
 
 @csrf_exempt
 def test1(request):

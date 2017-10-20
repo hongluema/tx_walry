@@ -16,10 +16,10 @@ def test(request):
     logging.basicConfig(level=logging.DEBUG)
     logging.debug("request:{}".format(request.COOKIES))
     response = HttpResponse(content_type='application/json')
-    name = response.set_cookie("name","mhl")
+    name = response.set_cookie("age","23")
     response.content = json.dumps({"say":"hello"})
     response["Access-Control-Allow-Origin"] = "*"
-    return response
+    return HttpResponse("nihao")
 
 @csrf_exempt
 def test1(request):

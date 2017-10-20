@@ -8,11 +8,11 @@ import logging, json
 
 # Create your views here.
 logger = logging.getLogger("mahl")
-logging.basicConfig(level=logging.DEBUG,format="﻿%(name)s ﻿%(asctime)s ﻿%（message)s",\
-                    filename="walry.log")
 
 @csrf_exempt
 def test(request):
+    logging.basicConfig(level=logging.DEBUG, format="﻿%(name)s ﻿%(asctime)s ﻿%（message)s", \
+                        filename="walry.log")
     logging.debug("request:{}".format(request.COOKIES))
     response = HttpResponse(content_type='application/json')
     name = response.set_cookie("name","mhl")

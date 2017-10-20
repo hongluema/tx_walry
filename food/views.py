@@ -11,8 +11,9 @@ logger = logging.getLogger("mahl")
 
 @csrf_exempt
 def test(request):
-    logging.basicConfig(level=logging.DEBUG, format="﻿%(name)s ﻿%(asctime)s ﻿%（message)s", \
-                        filename="walry.log")
+    # logging.basicConfig(level=logging.DEBUG, format="﻿%(name)s ﻿%(asctime)s ﻿%（message)s", \
+    #                     filename="walry.log")
+    logging.basicConfig(level=logging.DEBUG)
     logging.debug("request:{}".format(request.COOKIES))
     response = HttpResponse(content_type='application/json')
     name = response.set_cookie("name","mhl")

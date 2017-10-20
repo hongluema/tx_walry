@@ -16,7 +16,7 @@ def test(request):
     logging.debug("request:{}".format(request.COOKIES))
     response = HttpResponse(content_type='application/json')
     name = response.set_cookie("name","mhl")
-    # response.content = json.dumps(status)
+    response.content = json.dumps({"say":"hello"})
     response["Access-Control-Allow-Origin"] = "*"
     return response
 

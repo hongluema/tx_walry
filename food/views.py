@@ -11,11 +11,11 @@ logger = logging.getLogger("mahl")
 
 @csrf_exempt
 def test(request):
-    logging.basicConfig(level=logging.DEBUG, format="﻿%(asctime)s %(name)s %(module)s %(funcName)s %(pathname)s %(filename)s %(lineno)d %(levelname)s: %(message)s", \
+    logging.basicConfig(level=logging.DEBUG, format="﻿%(asctime)s %(name)s %(module)s %(funcName)s %(pathname)s %(lineno)d %(levelname)s: %(message)s", \
                         filename="/home/mhl/projects/django/walry/walry.log")
     # logging.basicConfig(level=logging.DEBUG)
-    # logger.debug("request:{}".format(request.COOKIES)
-    logger.debug("request:bedug")
+    logger.debug("request:{}".format(request.COOKIES))
+    # logger.debug("request:bedug")
     # response = HttpResponse(content_type='application/json')
     # name = response.set_cookie("sex","1")
     # response.content = json.dumps({"say":"hello"})

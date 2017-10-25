@@ -11,7 +11,7 @@ logger = logging.getLogger("mahl")
 
 @csrf_exempt
 def test(request):
-    logging.basicConfig(level=logging.DEBUG, format="﻿%(asctime)s %(name)s %(lineno)d %(levelname)s: %(message)s", \
+    logging.basicConfig(level=logging.DEBUG, format="﻿%(asctime)s %(name)s %(module)s %(funcName)s %(pathname)s %(filenames)s %(lineno)d %(levelname)s: %(message)s", \
                         filename="/home/mhl/projects/django/walry/walry.log")
     # logging.basicConfig(level=logging.DEBUG)
     # logger.debug("request:{}".format(request.COOKIES)

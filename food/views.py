@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-import logging, json
+import logging, traceback
 
 # Create your views here.
 logger = logging.getLogger("file:{},author:mhl".format(__name__))
@@ -20,6 +20,10 @@ def test(request):
     # name = response.set_cookie("sex","1")
     # response.content = json.dumps({"say":"hello"})
     # response["Access-Control-Allow-Origin"] = "*"
+    try:
+        1/0
+    except BaseException as e:
+        logger.error(traceback.format_exc())
     request.session["sex"] = 1
     return HttpResponse("nihao")
     # return response
@@ -32,3 +36,4 @@ def test1(request):
     # response.content = json.dumps(status)
     response["Access-Control-Allow-Origin"] = "*"
     return response
+

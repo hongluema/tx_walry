@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 import logging, json
 
 # Create your views here.
-logger = logging.getLogger("mahl")
+logger = logging.getLogger(__name__)
 
 @csrf_exempt
 def test(request):
